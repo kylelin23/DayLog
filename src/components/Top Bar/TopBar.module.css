@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 1px solid gray;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    background-color: lightskyblue;
+}
+
+.logo {
+    color: black;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.logo:hover {
+    color: white;
+}
