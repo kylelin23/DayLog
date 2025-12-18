@@ -1,7 +1,7 @@
 # DayLog
 
 ## Project Description:
-The goal of this app is to help people journal their thoughts in an easy and organized fashion consistently. 
+The goal of this app is to help people consistently journal their thoughts in an easy and organized fashion. 
 
 **Technologies Used:**
 React, MongoDB
