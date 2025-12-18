@@ -1,0 +1,58 @@
+.container {
+    background-color: #c5ebca;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signInBar {
+    background-color: #ebebeb;
+    color: black;
+    height: 5vh;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.submit {
+    border-radius: 5px;
+    border-color: black;
+    background-color: white;
+    padding: 10px;
+    color: black;
+    border-width: 2px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.signInContainer {
+    background-color: white;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 15px;
+}
+
+.text {
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.input {
+    padding: 10px;
+    color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 5px;
+}
+
+.signInComponents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
