@@ -14,7 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -54,5 +55,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 6vh;
+    gap: 2vh;
 }

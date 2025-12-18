@@ -1,0 +1,25 @@
+.square {
+    background-color: #89f5a6;
+    border-radius: 15px;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-color: black;
+    border-width: 2px;
+}
+
+.nameText {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.streakText {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: red;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
