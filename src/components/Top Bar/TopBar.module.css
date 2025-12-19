@@ -21,3 +21,8 @@
 .logo:hover {
     color: white;
 }
+
+.userButton {
+    position: absolute;
+    right: 5vh;
+}
