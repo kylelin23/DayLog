@@ -5,7 +5,7 @@ type Entry = {
     content: string;
 }
 
-type Journal = {
+export type JournalFormat = {
     name: string;
     streak: number;
     color: string;
@@ -18,7 +18,7 @@ const entrySchema = new Schema<Entry>({
     content: { type: String, required: true }
 });
 
-const journalSchema = new Schema<Journal>({
+const journalSchema = new Schema<JournalFormat>({
     name: { type: String, required: true },
     streak: { type: Number, required: true },
     color: { type: String, required: true },
@@ -26,6 +26,5 @@ const journalSchema = new Schema<Journal>({
     body: { type: [entrySchema], required: true }
 });
 
-const Journal = mongoose.models['journals'] || mongoose.model('journals', journalSchema);
-
-export default Journal;
+const JournalFormat = mongoose.models['journals'] || mongoose.model('journals', journalSchema);
+export default JournalFormat;
