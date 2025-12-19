@@ -22,4 +22,9 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 1px;
+    background-color: white;
+    padding: 5px;
 }
