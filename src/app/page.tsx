@@ -1,9 +1,20 @@
 "use client";
 
-import { SignInButton, SignUpButton, SignedOut } from '@clerk/nextjs'
+import { SignInButton, SignUpButton, SignedOut, useUser } from '@clerk/nextjs'
 import style from "./signIn.module.css"
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function LogIn() {
+
+  const { isLoaded, isSignedIn } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isSignedIn) {
+      router.push("/home");
+    }
+  }, [isSignedIn, router]);
 
   return (
 
