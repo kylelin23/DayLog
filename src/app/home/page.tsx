@@ -21,21 +21,24 @@ export default async function Home () {
   const journals = await getJournals(userId) || [];
 
   return(
-    <div className = {style.container}>
-      {journals.map(((journal) =>
-        <Link
-          key = {journal._id}
-          href = {`/home/${journal._id}`}>
-          <Journal
-            name = {journal.name}
-            userId = {journal.user_id}
-            streak = {journal.streak}
-            password = {journal.password}
-            color = {journal.color}
-            body = {journal.body}
-          />
-        </Link>
-      ))}
+    <div className = {style.outerContainer}>
+      <div className = {style.titleText}>Dashboard</div>
+      <div className = {style.container}>
+        {journals.map(((journal) =>
+          <Link
+            key = {journal._id}
+            href = {`/home/${journal._id}`}>
+            <Journal
+              name = {journal.name}
+              userId = {journal.user_id}
+              streak = {journal.streak}
+              password = {journal.password}
+              color = {journal.color}
+              body = {journal.body}
+            />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,21 @@
 .container {
-    background-color: red;
+    background-color: white;
     display: flex;
     padding: 100px;
+    padding-top: 50px;
     flex-wrap: wrap;
     gap: 100px;
+    min-height: calc(100vh - 210px);
+}
+
+.titleText {
+    font-size: 50px;
+    padding-left: 100px;
+    padding-top: 50px;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.outerContainer {
+    background-color: white;
 }
