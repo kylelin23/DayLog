@@ -1,22 +1,44 @@
 .container {
-    background-color: #c5ebca;
+    background-color: #dbf9ff;
     height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 50px;
+    gap: 10vw;
 }
 
 .text {
     color: black;
+    font-size: 20px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .button {
-    border-radius: 15px;
+    border-radius: 50px;
     border-width: 2px;
     padding: 15px;
     font-size: 25px;
     color: black;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.image {
+    height: 60vh;
+    width: auto;
+    border-radius: 50px;
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.titleText {
+    font-size: 70px;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 35px;
 }
