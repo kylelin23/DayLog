@@ -12,8 +12,26 @@ export default async function JournalPage({ params }: { params: Promise<{ slug: 
 
     if (!journal) return <div>Journal not found</div>;
 
+    function dateToString (date: Date) {
+        return date.toDateString();
+    }
+
 
     return(
-        <div>{journal.name}</div>
+        <div className = {style.container}>
+            <div className = {style.journalTypeText}>{journal.name}</div>
+            <hr className={style.divider}></hr>
+            {/* PUT NEW JOURNAL ENTRY INPUT HERE */}
+            {journal.body.map((entry: any, index: any) => (
+                <div className = {style.entryContainer} key = {index}>
+                    <div className = {style.bodyContainer}>
+                        <div className = {style.titleText}>{entry.title}</div>
+                        <div className = {style.dateText}>{dateToString(entry.day)}</div>
+                        <div className = {style.contentText}>{entry.content}</div>
+                    </div>
+                    <hr></hr>
+                </div>
+            ))}
+        </div>
     )
 }

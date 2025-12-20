@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.journalTypeText {
+    margin-top: 50px;
+    font-size: 50px;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.divider {
+    width: 80%;
+    margin-top: 50px;
+}
+
+.titleText {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dateText {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contentText {
+    font-size: 15px;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.entryContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80vw;
+}
+
+.bodyContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}

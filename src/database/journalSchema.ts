@@ -1,7 +1,8 @@
 import mongoose, { Schema } from "mongoose";
 
-type Entry = {
+export type Entry = {
     day: Date;
+    title: string;
     content: string;
 }
 
@@ -16,6 +17,7 @@ export type JournalFormat = {
 
 const entrySchema = new Schema<Entry>({
     day: { type: Date, required: true },
+    title: { type: String, required: true },
     content: { type: String, required: true }
 });
 
