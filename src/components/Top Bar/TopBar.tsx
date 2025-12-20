@@ -8,11 +8,20 @@ export default function TopBar() {
             <h1>
                 <Link href="/home" className={style.logo}>DayLog</Link>
             </h1>
-            <div className = {style.userButton}>
                 <SignedIn>
-                    <UserButton />
+                    <div className = {style.account}>
+                        <div style = {{color: 'black'}}>Account</div>
+
+                        <UserButton appearance={{
+                            elements: {
+                                userButtonAvatarBox: {
+                                    width: "35px",
+                                    height: "35px",
+                                },
+                            },
+                        }}/>
+                    </div>
                 </SignedIn>
-            </div>
         </header>
     )
 }

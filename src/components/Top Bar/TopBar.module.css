@@ -22,7 +22,10 @@
     color: white;
 }
 
-.userButton {
+.account {
     position: absolute;
     right: 5vh;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }

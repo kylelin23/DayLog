@@ -21,9 +21,9 @@ export default function LogIn() {
 
     <div className= {style.container}>
       <div className = {style.innerContainer}>
-        <div style = {{marginBottom: '50px'}}>
+        <div className = {style.textContainer}>
           <div className = {style.titleText}>
-            Welcome to DayLog! 
+            Welcome to DayLog!
           </div>
           <div className = {style.text}>
             A Clear Space for Your Thoughts.
