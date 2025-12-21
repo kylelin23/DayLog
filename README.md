@@ -9,7 +9,6 @@ React, Next.js, MongoDB
 ## Features
 - Authentication
 - Streaks
-- Gratitude Journal Template
 - Journal Passwords
 
 ## How to Start
