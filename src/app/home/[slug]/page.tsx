@@ -1,6 +1,8 @@
+
 import connectDB from '@/src/database/db';
 import style from './journalPage.module.css'
 import JournalFormat from '@/src/database/journalSchema';
+import Link from 'next/link';
 
 export default async function JournalPage({ params }: { params: Promise<{ slug: string }> }) {
 
@@ -19,6 +21,7 @@ export default async function JournalPage({ params }: { params: Promise<{ slug: 
 
     return(
         <div className = {style.container}>
+            <Link href = '../' className = {style.backButton}>Back</Link>
             <div className = {style.journalTypeText}>{journal.name}</div>
             <hr className={style.divider}></hr>
             {/* PUT NEW JOURNAL ENTRY INPUT HERE */}
