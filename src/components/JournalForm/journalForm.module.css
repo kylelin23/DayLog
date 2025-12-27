@@ -1,0 +1,17 @@
+.input {
+    padding: 10px;
+    color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 5px;
+}
+
+.submit {
+    border-radius: 5px;
+    background-color: lightskyblue;
+    padding: 10px;
+    color: white;
+    border-width: 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

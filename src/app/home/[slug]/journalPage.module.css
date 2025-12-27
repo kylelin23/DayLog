@@ -64,3 +64,8 @@
     left: 12vw;
     margin-top: 50px;
 }
+
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+}
