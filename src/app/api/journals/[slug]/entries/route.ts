@@ -17,15 +17,15 @@ export async function POST (req: NextRequest, { params }: { params: Promise<{slu
             );
         }
         await connectDB();
-        const newEntry = await Entry.create({
+        const newEntry = {
             day: new Date(),
             title,
             content,
-        });
+        };
 
-        const updatedJournal = await JournalFormat.findOneAndUpdate(
-            { slug: slug},
-            { $push: {body: newEntry}},
+        const updatedJournal = await JournalFormat.findByIdAndUpdate(
+            slug,
+            { $push: { body: newEntry }},
             { new: true }
         );
 

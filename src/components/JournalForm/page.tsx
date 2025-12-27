@@ -1,7 +1,7 @@
 "use client"
 import style from './journalForm.module.css'
 
-export default function JournalForm (slug: any) {
+export default function JournalForm ({ slug }: { slug: string }) {
     const addEntry = async (e: React.MouseEvent<HTMLInputElement>) => {
         e.preventDefault();
         const form = document.getElementById("contact-form") as HTMLFormElement | null;
