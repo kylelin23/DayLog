@@ -1,10 +1,13 @@
 "use client"
 import { useState } from 'react';
 import style from './journalForm.module.css'
+import { useRouter } from 'next/navigation';
+
 
 export default function JournalForm ({ slug }: { slug: string }) {
 
     const [error, setError] = useState('');
+    const router = useRouter();
 
     const addEntry = async (e: React.MouseEvent<HTMLInputElement>) => {
         e.preventDefault();
@@ -20,6 +23,7 @@ export default function JournalForm ({ slug }: { slug: string }) {
 
         if(!title || !content){
             setError("Make sure to fill out both fields! ");
+            return;
         }
 
         try{
@@ -35,6 +39,8 @@ export default function JournalForm ({ slug }: { slug: string }) {
                 return;
             }
             const updatedJournal = await res.json();
+            router.refresh();
+            form.reset();
         }catch (err) {
             console.error(err);
         }
