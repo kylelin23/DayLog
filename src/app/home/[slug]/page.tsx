@@ -32,7 +32,7 @@ export default async function JournalPage({ params }: { params: Promise<{ slug: 
             <hr className={style.divider}></hr>
 
             {/* PUT NEW JOURNAL ENTRY INPUT HERE */}
-            {journal.body.map((entry: any, index: any) => (
+            {journal.body.reverse().map((entry: any, index: any) => (
                 <div className = {style.entryContainer} key = {index}>
                     <div className = {style.bodyContainer}>
                         <div className = {style.titleContainer}>
