@@ -1,4 +1,3 @@
-
 import connectDB from '@/src/database/db';
 import style from './journalPage.module.css'
 import JournalFormat from '@/src/database/journalSchema';

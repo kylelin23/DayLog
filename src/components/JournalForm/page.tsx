@@ -1,9 +1,14 @@
 "use client"
+import { useState } from 'react';
 import style from './journalForm.module.css'
 
 export default function JournalForm ({ slug }: { slug: string }) {
+
+    const [error, setError] = useState('');
+
     const addEntry = async (e: React.MouseEvent<HTMLInputElement>) => {
         e.preventDefault();
+        setError('');
         const form = document.getElementById("contact-form") as HTMLFormElement | null;
         if (!form) {
             console.error("Form not found");
@@ -12,6 +17,10 @@ export default function JournalForm ({ slug }: { slug: string }) {
         const formData = new FormData(form);
         const title = formData.get("title") as string | null;
         const content = formData.get("content") as string | null;
+
+        if(!title || !content){
+            setError("Make sure to fill out both fields! ");
+        }
 
         try{
             const res = await fetch(`/api/journals/${slug}/entries`, {
@@ -32,30 +41,33 @@ export default function JournalForm ({ slug }: { slug: string }) {
     }
 
     return(
-        <form id="contact-form">
-            <input
-            className={style.input}
-            type="text"
-            id="title"
-            name="title"
-            placeholder="Title"
-            required
-            />
-            <br /><br />
-            <textarea
-            className={style.input2}
-            id="content"
-            name="content"
-            placeholder="Start writing your thoughts here! "
-            required
-            />
-            <br /><br />
-            <input
-            className={style.submit}
-            type="submit"
-            value="Submit"
-            onClick = {addEntry}
-            />
-        </form>
+        <div>
+            <form id="contact-form">
+                <input
+                className={style.input}
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Title"
+                required
+                />
+                <br /><br />
+                <textarea
+                className={style.input2}
+                id="content"
+                name="content"
+                placeholder="Start writing your thoughts here! "
+                required
+                />
+                <br /><br />
+                <input
+                className={style.submit}
+                type="submit"
+                value="Submit"
+                onClick = {addEntry}
+                />
+            </form>
+            <div className = {style.errorText}>{error}</div>
+        </div>
     )
 }
