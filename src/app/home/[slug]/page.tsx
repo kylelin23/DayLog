@@ -24,8 +24,12 @@ export default async function JournalPage({ params }: { params: Promise<{ slug: 
         <div className = {style.container}>
             <Link href = './' className = {style.backButton}>Back</Link>
             <div className = {style.journalTypeText}>{journal.name}</div>
+            <hr className={style.divider} style = {{marginBottom: 50}}></hr>
+            <div className = {style.newEntryContainer}>
+                <div className = {style.titleText} style = {{marginBottom: 30}}>New Entry</div>
+                <JournalForm slug = {slug}/>
+            </div>
             <hr className={style.divider}></hr>
-            <JournalForm slug = {slug}/>
 
             {/* PUT NEW JOURNAL ENTRY INPUT HERE */}
             {journal.body.map((entry: any, index: any) => (

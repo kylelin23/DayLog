@@ -43,7 +43,7 @@ export default function JournalForm ({ slug }: { slug: string }) {
             />
             <br /><br />
             <textarea
-            className={style.input}
+            className={style.input2}
             id="content"
             name="content"
             placeholder="Start writing your thoughts here! "

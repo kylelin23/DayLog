@@ -7,6 +7,17 @@
     border-radius: 5px;
 }
 
+.input2 {
+    padding: 10px;
+    color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 5px;
+    width: calc(80vw - 40px);
+    height: 100px;
+}
+
 .submit {
     border-radius: 5px;
     background-color: lightskyblue;
